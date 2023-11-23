@@ -1,31 +1,31 @@
-#include <iomanip>  
-#include <iostream>  // cin cout
+//Дано натуральное n.Верно ли, что это число содержит ровно три одинаковых
+//цифры ?
+
+#include <iostream>
+
 using namespace std;
 
 void main()
 {
-	int  n, k=0, buf ;
-	cout << "Enter n:" << endl;
+	int  n , k = 0 , temp ;
+	cout << "Enter natural number n:" << endl;
 	cin >> n;
+
 	for (int i = 0; i != 10; i++)
 	{
 		k = 0;
-		buf = n;
-		while (buf!=0 )
+		temp = n;
+		while (temp!=0 )
 		{   
-			if (buf % 10 == i) k++;
-			buf = buf / 10;
-		
+			if (temp % 10 == i) k++;
+			temp = temp / 10;
 		}
-		if (k == 3) break;
-	
-		
+		if (k == 3) break;	
 	}
 	if (k == 3)
-			cout << "da" << endl;
-		else
-			cout << "net" << endl;
-	
+		cout << "Yes, there are" << endl;
+	else
+		cout << "No, there aren't" << endl;
 }
 
 
