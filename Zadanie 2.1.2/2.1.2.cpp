@@ -1,14 +1,17 @@
-#include <iomanip>  
-#include <iostream>  // cin cout
+//Определить сумму первых k цифр дробной части заданного положительного
+//вещественного числа.
+
+#include <iostream>
+
 using namespace std;
 
 void main()
 {
 	int  sum {0}, num, k{1};
 	double n, buf, Znum, temp;
-	cout << "Enter n:" << endl;
+	cout << "Enter real number n:" << endl;
 	cin >> n;
-	cout << "Enter k" << endl;
+	cout << "Enter the number k of first digits of fractional part of real number n" << endl;
 	cin >> k;
 	if ((n <= 0) || (k<=0)) cout << "you have entered incorrect value" << endl;
 	else
@@ -23,6 +26,4 @@ void main()
 			} 
 	}
 		cout << "sum=" << sum << endl;
-	
-		
 }
